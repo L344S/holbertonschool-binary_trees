@@ -20,9 +20,7 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 
 	/* Return NULL if the parent is NULL or on failure to allocate memory */
 	if (!new_node || parent == NULL)
-	{
 		return (NULL);
-	}
 
 	new_node->n = value;
 	new_node->parent = parent;
