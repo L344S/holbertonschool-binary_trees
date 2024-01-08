@@ -1,3 +1,6 @@
-main.c
+# Ignore all test files that end in main.c
+*main.c
+# Ignore the binary tree print function
 binary_tree_print.c
+# Ignore executables
 a.out
