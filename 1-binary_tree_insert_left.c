@@ -16,26 +16,37 @@
  */
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 {
-	binary_tree_t *new_node = malloc(sizeof(binary_tree_t));
+	binary_tree_t *new_node = NULL; /* Create a new node */
 
-	/* Return NULL if the parent is NULL or on failure to allocate memory */
-	if (!new_node || parent == NULL)
-		return (NULL);
+	/* if the parent is NULL */
+	if (parent == NULL)
+		return (NULL); /* return NULL */
 
-	new_node->n = value;
-	new_node->parent = parent;
-	new_node->left = NULL;
-	new_node->right = NULL;
+	/* allocate memory for the new node */
+	new_node = malloc(sizeof(binary_tree_t));
 
+	/* check if the allocation fails */
+	if (new_node == NULL)
+		return (NULL); /* return NULL */
+
+	/* initialize the new node and set its values */
+	new_node->n = value; /* add the int value in parameter to the new node */
+	new_node->parent = parent; /* The parent of the new node is the parent */
+	new_node->left = NULL; /* the left child is NULL */
+	new_node->right = NULL; /* the right child is NULL */
+
+	/* if the parent already has a left child */
 	if (parent->left != NULL)
 	{
-		/* If parent already has a left-child, the new node takes its place */
+		/* make the new node the left child of the parent */
 		new_node->left = parent->left;
+		/* make the parent the parent of the left child */
 		parent->left->parent = new_node;
 	}
 
-	/* Set the new node as the left-child of the parent */
+	/* make the new node the left child of the parent */
 	parent->left = new_node;
 
+	/* return the new node */
 	return (new_node);
 }
