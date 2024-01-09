@@ -14,28 +14,24 @@
 */
 size_t binary_tree_size(const binary_tree_t *tree)
 {
-	/* Initialize the size to 0 to store the size of the binary tree */
-	size_t size_tree = 0;
+	size_t size_left = 0;  /* store the number of nodes in the left subtree */
+	size_t size_right = 0; /* store the number of nodes in the right subtree */
 
-	/* if the tree is not NULL */
-	if (tree != NULL)
-	{
-		size_tree = 1; /* initialize the size to 1 (because the root node is 1) */
-	}
+	/* if the tree is NULL */
+	if (tree == NULL)
+		return (0); /* return 0 (because the tree is empty) */
 
-	/* if the current node has a left subtree */
+	/* if the left subtree is not NULL */
 	if (tree->left != NULL)
-	{
-    /* add the size of the left subtree to the total size */
-		size_tree = size_tree + binary_tree_size(tree->left);
-	}
+		/* add the number of nodes in the left subtree to the total number */
+		size_left = binary_tree_size(tree->left);
 
-	/* if the current node has a right subtree */
+	/* if the right subtree is not NULL */
 	if (tree->right != NULL)
-	{
-    /* add the size of the right subtree to the total size */
-		size_tree = size_tree + binary_tree_size(tree->right);
-	}
+		/* add the number of nodes in the right subtree to the total number */
+		size_right = binary_tree_size(tree->right);
 
-	return (size_tree); /* return the size of the binary tree */
+	/* return the total number of nodes */
+	/* + 1 to  count the current node */
+	return (size_left + size_right + 1);
 }
