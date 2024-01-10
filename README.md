@@ -1,19 +1,19 @@
-# Binary Trees
+# ☘ Binary Trees
 
-## ☘ Table of Contents
-- [Description](#☘-description)
-- [Files and Functions](#☘-files-and-functions)
+## Table of Contents
+- [Description](#description)
+- [Files and Functions](#files-and-functions)
 - [Authors](#authors)
 
-## ☘ Description
+## Description
 
 A binary tree is a tree data structure in which each node has at most two children, referred to as the left child and the right child. Each node contains an element (in this case, an integer), and pointers to its left and right children, and its parent.
 
-## ☘ How it works
+### ☘ How it works
 
 A binary tree starts with a root node, and each node in the tree can have a left child, a right child, or both. The tree is traversed and manipulated using various algorithms, which can be broadly divided into depth-first (pre-order, in-order, post-order) etc...
 
-### Example
+### ☘ Example
 
 ```
         1  <- 1 = root
@@ -24,7 +24,7 @@ A binary tree starts with a root node, and each node in the tree can have a left
 ```
 In this example, 1 is the root node of the tree. 2 and 3 are the children of 1. Similarly, 4 and 5 are the children of 2, and 6 and 7 are the children of 3. Nodes 4, 5, 6, and 7 are the leaves of the tree (nodes without children).
 
-## ☘ Files and Functions
+## Files and Functions
 
 | File Name | Function | Description |
 | --- | --- | --- |
@@ -48,6 +48,6 @@ In this example, 1 is the root node of the tree. 2 and 3 are the children of 1. 
 | 17-binary_tree_sibling.c | `binary_tree_sibling` | Finds the sibling of a node. |
 | 18-binary_tree_uncle.c | `binary_tree_uncle` | Finds the uncle of a node. |
 
-## ☘ Authors
+## Authors
 - [@Yazgahar](https://www.github.com/Yazgahar)
 - [@L344S](https://www.github.com/L344S)
