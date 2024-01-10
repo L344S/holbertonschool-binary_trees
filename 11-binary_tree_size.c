@@ -32,6 +32,6 @@ size_t binary_tree_size(const binary_tree_t *tree)
 		size_right = binary_tree_size(tree->right);
 
 	/* return the total number of nodes */
-	/* + 1 to  count the current node */
+	/* + 1 to  count the current node*/
 	return (size_left + size_right + 1);
 }
