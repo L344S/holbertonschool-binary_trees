@@ -6,6 +6,7 @@
 *
 * --------------- Description ---------------
 * This function measures the height of a binary tree.
+* The height of a binary tree is the longest path from the root to any leaf
 * A binary tree is a tree who have at most 2 children
 * (left child and right child).
 *
